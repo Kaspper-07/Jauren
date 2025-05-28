@@ -1,0 +1,258 @@
+/* styles.css */
+
+/* Tipografía y variables de color */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #002147;
+  --color-secondary: #555555;
+  --color-accent: #777777;
+  --color-light: #f5f5f5;
+  --color-text: #333333;
+}
+
+/* Reset básico */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base de la página */
+body {
+  font-family: 'Merriweather', serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Encabezado y navegación */
+header {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-light);
+  padding: 1rem 0;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-img {
+  max-width: 120px;
+  margin-bottom: 0.5rem;
+}
+nav {
+  margin-top: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: 700;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Estilo general para títulos de sección */
+h3.section-title {
+  font-size: 3rem;            /* Tamaño aumentado */
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: var(--color-primary);
+}
+
+/* Sección Hero con cinemagraph de fondo */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+}
+.hero-video {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: auto; height: 100%; min-width: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-content {
+  position: absolute;
+  top: 50%; right: 10%; left: auto;
+  width: 35%; max-width: 400px;
+  transform: translate(0, -50%);
+  padding: 0;
+  text-align: right;
+  color: var(--color-bg);
+  z-index: 1;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+  position: relative;
+  padding: 0.5rem 0;
+  animation: slideIn 0.8s ease-out forwards;
+}
+.hero-content h2::before,
+.hero-content h2::after {
+  content: '';
+  position: absolute;
+  width: 50px; height: 2px;
+  background: var(--color-primary);
+  left: 50%; transform: translateX(-50%);
+}
+.hero-content h2::before { top: -0.75rem; }
+.hero-content h2::after  { bottom: -0.75rem; }
+.hero-content p {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  opacity: 0;
+  animation: slideIn 0.8s ease-out 0.4s forwards;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Tarjeta para Nosotros */
+.about-summary {
+  background: var(--color-bg);
+  border: 1px solid var(--color-light);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.about-summary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.about-summary p {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+/* Grid de servicios y estilo de tarjetas */
+.services-grid, .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.service-card, .testimonial-card {
+  background: #fdfdfd;
+  border: 1px solid var(--color-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.service-card:hover, .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: var(--color-primary);
+}
+.service-card h4, .testimonial-card .rating {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.service-card p, .testimonial-card p {
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Calificación de opiniones */
+.rating {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.testimonial-card cite {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-secondary);
+  text-align: right;
+}
+
+/* Formulario de contacto estilo tarjeta */
+.contact-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-light);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.contact-card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+.contact-card button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact-card button:hover {
+  background: var(--color-secondary);
+}
+
+/* Footer oscuro y compacto */
+footer {
+  background-color: #000000;    /* Fondo negro */
+  color: #ffffff;               /* Texto blanco */
+  text-align: center;
+  padding: 1rem 0;              /* Altura reducida */
+}
+
+footer .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5rem 0;            /* Padding vertical más pequeño */
+}
+
+footer p {
+  margin: 0;                    /* Sin margen inferior */
+  font-size: 0.9rem;            /* Tamaño de texto discreto */
+  line-height: 1.4;
+}
