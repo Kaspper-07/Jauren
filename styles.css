@@ -237,6 +237,13 @@ h3.section-title {
   background: var(--color-secondary);
 }
 
+/* Mejora de visibilidad para el formulario de contacto */
+.contact-card {
+  background: var(--color-light);              /* Fondo claro para destacar */
+  border: 2px solid var(--color-secondary);    /* Borde más grueso y visible */
+}
+
+
 /* Footer oscuro y compacto */
 footer {
   background-color: #000000;    /* Fondo negro */
