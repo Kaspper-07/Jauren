@@ -9,6 +9,7 @@
   --color-accent: #777777;
   --color-light: #f5f5f5;
   --color-text: #333333;
+  --spacing: 1.5rem;
 }
 
 /* Reset básico */
@@ -18,248 +19,408 @@
   box-sizing: border-box;
 }
 
-/* Base de la página */
+/* Estilos globales */
 body {
   font-family: 'Merriweather', serif;
-  background-color: var(--color-bg);
+  background: linear-gradient(135deg, var(--color-light) 0%, var(--color-bg) 100%);
   color: var(--color-text);
   line-height: 1.6;
 }
 
+/* Contenedores */
 .container {
   width: 90%;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: var(--spacing) 0;
 }
 
-/* Encabezado y navegación */
+/* Encabezado */
 header {
-  background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-light);
-  padding: 1rem 0;
+  background: var(--color-bg);
+  padding: var(--spacing) 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 .logo-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
+
 .logo-img {
-  max-width: 120px;
-  margin-bottom: 0.5rem;
+  width: 50px;
+  height: auto;
+  margin-right: 0.5rem;
 }
-nav {
-  margin-top: 1rem;
-}
+
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
 }
+
 nav a {
   text-decoration: none;
   color: var(--color-secondary);
   font-weight: 700;
-  transition: color 0.3s;
+  transition: color 0.2s ease;
 }
+
 nav a:hover {
   color: var(--color-primary);
 }
 
-/* Estilo general para títulos de sección */
-h3.section-title {
-  font-size: 3rem;            /* Tamaño aumentado */
-  text-align: center;
-  margin: 2rem 0 1rem;
-  color: var(--color-primary);
-}
-
-/* Sección Hero con cinemagraph de fondo */
+/* Hero */
 .hero {
   position: relative;
+  height: 80vh;
   overflow: hidden;
-  height: 70vh;
 }
+
 .hero-video {
   position: absolute;
-  top: 50%; left: 50%;
-  width: auto; height: 100%; min-width: 100%;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
 }
+
 .hero-content {
-  position: absolute;
-  top: 50%; right: 10%; left: auto;
-  width: 35%; max-width: 400px;
-  transform: translate(0, -50%);
-  padding: 0;
-  text-align: right;
+  position: relative;
+  text-align: center;
   color: var(--color-bg);
-  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 var(--spacing);
 }
+
 .hero-content h2 {
   font-size: 2.5rem;
-  position: relative;
-  padding: 0.5rem 0;
-  animation: slideIn 0.8s ease-out forwards;
+  margin-bottom: 1rem;
 }
-.hero-content h2::before,
-.hero-content h2::after {
-  content: '';
-  position: absolute;
-  width: 50px; height: 2px;
-  background: var(--color-primary);
-  left: 50%; transform: translateX(-50%);
-}
-.hero-content h2::before { top: -0.75rem; }
-.hero-content h2::after  { bottom: -0.75rem; }
+
 .hero-content p {
-  margin-top: 1rem;
-  font-size: 1.125rem;
-  opacity: 0;
-  animation: slideIn 0.8s ease-out 0.4s forwards;
-}
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(50px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-/* Tarjeta para Nosotros */
-.about-summary {
-  background: var(--color-bg);
-  border: 1px solid var(--color-light);
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-.about-summary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.about-summary p {
-  text-align: justify;
   font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Grid de servicios y estilo de tarjetas */
-.services-grid, .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
+.btn {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s ease;
 }
-.service-card, .testimonial-card {
-  background: #fdfdfd;
-  border: 1px solid var(--color-light);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+
+.btn:hover {
+  background: var(--color-secondary);
 }
-.service-card:hover, .testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+/* Sección títulos */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: var(--spacing);
+  color: var(--color-primary);
 }
-.service-icon {
-  font-size: 2.5rem;
+
+/* Ajuste específico para 'Nosotros' */
+#nosotros .section-title {
+  margin-top: var(--spacing);
+}
+
+/* Nosotros */
+.about-summary p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing);
+  font-size: 1rem;
+}
+
+/* Acordeón con iconos y estilos */
+.accordion details {
+  background: var(--color-bg);
+  border-radius: 0.5rem;
   margin-bottom: 0.75rem;
-  display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion summary {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  list-style: none;
+  position: relative;
+  border-left: 4px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.accordion summary:hover {
+  background: var(--color-light);
+  border-color: var(--color-primary);
+}
+
+.accordion summary::after {
+  content: '▸';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion details[open] summary::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion details[open] summary {
+  background: var(--color-light);
+}
+
+.accordion p {
+  padding: 0 1.5rem 1rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing);
+}
+
+.service-card {
+  background: var(--color-bg);
+  padding: var(--spacing);
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   color: var(--color-primary);
 }
-.service-card h4, .testimonial-card .rating {
+
+.service-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
   color: var(--color-primary);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card ul {
+  list-style: disc inside;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.service-card ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Testimonios */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: var(--spacing);
+}
+
+.testimonial-card {
+  background: var(--color-bg);
+  padding: var(--spacing);
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Estilo para el texto introductorio */
+.testimonials .intro {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing);
+}
+
+.testimonial-card .rating {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
-.service-card p, .testimonial-card p {
-  color: var(--color-secondary);
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
 
-/* Calificación de opiniones */
-.rating {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
 .testimonial-card cite {
-  display: block;
-  margin-top: 1rem;
+  font-size: 0.85rem;
   color: var(--color-secondary);
-  text-align: right;
 }
 
-/* Formulario de contacto estilo tarjeta */
+/* Contacto */
+/* Ocultar datos de contacto */
+.contact .datos {
+  display: none !important;
+}
+
+/* Estilo para la introducción */
+.contact .container > p {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing);
+}
+
+/* Ajustar formulario */
 .contact-card {
   background: var(--color-bg);
-  border: 1px solid var(--color-light);
-  border-radius: 8px;
-  padding: 2rem;
+  padding: var(--spacing);
+  border-radius: 0.75rem;
   max-width: 600px;
-  margin: 1.5rem auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  margin: var(--spacing) auto 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+.contact-card form {
+  display: grid;
+  gap: 1rem;
 }
+
 .contact-card label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--color-secondary);
   font-weight: 600;
 }
+
 .contact-card input,
 .contact-card textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border: 1px solid var(--color-light);
-  border-radius: 4px;
-  margin-bottom: 1rem;
+  border-radius: 0.5rem;
   font-family: inherit;
 }
+
 .contact-card button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
   background: var(--color-primary);
-  color: #fff;
-  font-weight: 700;
+  color: var(--color-bg);
+  padding: 0.75rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.5rem;
+  font-weight: 700;
   cursor: pointer;
 }
+
 .contact-card button:hover {
   background: var(--color-secondary);
 }
 
-/* Mejora de visibilidad para el formulario de contacto */
-.contact-card {
-  background: var(--color-light);              /* Fondo claro para destacar */
-  border: 2px solid var(--color-secondary);    /* Borde más grueso y visible */
-}
-
-
-/* Footer oscuro y compacto */
+/* Footer ajustado con posición absoluta */
 footer {
-  background-color: #000000;    /* Fondo negro */
-  color: #ffffff;               /* Texto blanco */
-  text-align: center;
-  padding: 1rem 0;              /* Altura reducida */
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--spacing) 0;
+  position: relative;
+  height: 120px;
 }
 
-footer .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0.5rem 0;            /* Padding vertical más pequeño */
+/* Slogan centrado */
+footer .footer-left p:last-child {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  margin: 0;
 }
 
-footer p {
-  margin: 0;                    /* Sin margen inferior */
-  font-size: 0.9rem;            /* Tamaño de texto discreto */
-  line-height: 1.4;
+/* Dirección como columna y más arriba */
+footer .footer-left .footer-address {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  width: 200px;
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Redes sociales abajo centradas */
+footer .social-icons {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+/* Íconos blancos */
+footer .social-icons img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+  /* Footer móvil: todo centrado en columna */
+  footer {
+    height: auto;
+    padding-bottom: calc(var(--spacing) * 2);
+  }
+  footer .footer-left p:last-child,
+  footer .social-icons,
+  footer .footer-left .footer-address {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+  footer .footer-left .footer-address {
+    margin-top: 0.5rem;
+  }
+  footer .social-icons {
+    margin-top: 0.5rem;
+  }
 }
