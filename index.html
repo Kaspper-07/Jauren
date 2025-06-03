@@ -6,9 +6,10 @@
   <title>Servicios Legales Jauren</title>
   <meta name="description" content="Despacho legal especializado en bufetes jurídicos y trámites legales en CDMX. Constitución 2023.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-  <!-- Header y navegación -->
+  <!-- Header -->
   <header>
     <div class="container logo-container">
       <div class="logo">
@@ -27,7 +28,7 @@
     </div>
   </header>
 
-  <!-- Sección Hero con cinemagraph de fondo -->
+  <!-- Hero -->
   <section id="inicio" class="hero">
     <video class="hero-video" autoplay muted loop>
       <source src="./img/cinegraph.mp4" type="video/mp4">
@@ -40,29 +41,37 @@
     </div>
   </section>
 
-  <!-- Sección Nosotros -->
+    <!-- Nosotros -->
   <section id="nosotros" class="about">
     <h3 class="section-title">Nosotros</h3>
     <div class="container about-summary">
-      <p>Servicios Legales Jauren, S.A. de C.V. nació con la visión de ofrecer asesoría jurídica clara y efectiva. Nuestro equipo multidisciplinario defiende los intereses de empresas y particulares en la CDMX y toda la República.</p>
-      <p>Nuestras principales actividades incluyen <strong>Bufetes Jurídicos</strong> y <strong>Servicios de apoyo para trámites legales</strong>, diseñados para brindar soluciones integrales a personas y empresas en todo el país.</p>
-      <div class="accordion">
-        <details>
-          <summary><strong>Compromiso</strong></summary>
-          <p>Ética y transparencia en cada paso de tu trámite.</p>
-        </details>
-        <details>
-          <summary><strong>Excelencia</strong></summary>
-          <p>Actualizados en legislación y mejores prácticas para brindarte siempre el mejor servicio.</p>
-        </details>
-        <details>
-          <summary><strong>Empatía</strong></summary>
-          <p>Entendemos tu caso de manera personalizada y te acompañamos durante todo el proceso.</p>
-        </details>
+      <div class="about-card">
+        <p>Servicios Legales Jauren, S.A. de C.V. nació con la visión de ofrecer asesoría jurídica clara y efectiva. Nuestro equipo multidisciplinario defiende los intereses de empresas y particulares en la CDMX y toda la República.</p>
+        <p>Nuestras principales actividades incluyen <strong>Bufetes Jurídicos</strong> y <strong>Servicios de apoyo para trámites legales</strong>, diseñados para brindar soluciones integrales a personas y empresas en todo el país.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-item">
+          <h4>Compromiso</h4>
+          <p>
+            Ética y transparencia en cada paso de tu trámite. Nuestro equipo se compromete a brindarte atención puntual, información clara y resultados reales con base legal.
+          </p>
+        </div>
+        <div class="value-item">
+          <h4>Excelencia</h4>
+          <p>
+            Estamos actualizados en legislación y mejores prácticas para brindarte siempre el mejor servicio. Nos capacitamos constantemente y usamos herramientas modernas para optimizar cada proceso.
+          </p>
+        </div>
+        <div class="value-item">
+          <h4>Empatía</h4>
+          <p>
+            Entendemos tu situación de manera personalizada. Nos tomamos el tiempo para escuchar, explicar y acompañarte en cada etapa del proceso con sensibilidad humana y profesionalismo.
+          </p>
+        </div>
       </div>
     </div>
   </section>
-
   <!-- Sección Servicios -->
   <section id="servicios" class="services">
     <h3 class="section-title">Servicios</h3>
@@ -133,35 +142,63 @@
     </div>
   </section>
 
-  <!-- Sección Opiniones de Clientes -->
+    <!-- Opiniones - Carrusel horizontal con tarjetas -->
   <section id="opiniones" class="testimonials">
     <h3 class="section-title">Lo que dicen de nosotros</h3>
     <div class="container">
       <p class="intro">Nuestros clientes valoran la claridad, rapidez y ética con la que abordamos cada caso. Aquí algunas opiniones:</p>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="rating">4.8 ★★★★☆</div>
-          <p>“El equipo de Jauren nos guió paso a paso en un caso complejo y obtuvimos un resultado favorable.”</p>
-          <cite>— Alexis Carbajal</cite>
+
+      <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">5.0 ★★★★★</div>
+            <p>“El equipo legal fue puntual y claro en todo momento.”</p>
+            <cite>— Laura P.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">4.8 ★★★★☆</div>
+            <p>“Nos ayudaron a resolver un juicio complicado con éxito.”</p>
+            <cite>— Roberto M.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">5.0 ★★★★★</div>
+            <p>“Transparencia total desde la primera consulta.”</p>
+            <cite>— Mariana C.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">4.9 ★★★★☆</div>
+            <p>“Servicio cálido, profesional y altamente recomendable.”</p>
+            <cite>— Alejandro R.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">5.0 ★★★★★</div>
+            <p>“Muy agradecida por la paciencia y claridad del equipo.”</p>
+            <cite>— Gabriela N.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">4.7 ★★★★☆</div>
+            <p>“Me sentí acompañado en todo momento.”</p>
+            <cite>— Víctor L.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">5.0 ★★★★★</div>
+            <p>“Me devolvieron la tranquilidad. ¡Gracias!”</p>
+            <cite>— Ivonne Z.</cite>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <div class="rating">4.8 ★★★★☆</div>
+            <p>“Excelente trato humano y conocimiento profundo.”</p>
+            <cite>— Tomás E.</cite>
+          </div>
         </div>
-        <div class="testimonial-card">
-          <div class="rating">5.0 ★★★★★</div>
-          <p>“Excelente atención y conocimiento profundo en materia mercantil. Muy recomendados.”</p>
-          <cite>— Mariana Ávila</cite>
-        </div>
-        <div class="testimonial-card">
-          <div class="rating">4.7 ★★★★☆</div>
-          <p>“Su asesoría fiscal nos ayudó a optimizar nuestros procesos y cumplir con todas las obligaciones.”</p>
-          <cite>— Victoria Anaya</cite>
-        </div>
-        <div class="testimonial-card">
-          <div class="rating">4.9 ★★★★☆</div>
-          <p>“Profesionales, eficientes y transparentes. Un despacho en el que confío al 100%."</p>
-          <cite>— Jorge </cite>
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
+
+
 
   <!-- Sección Contacto -->
   <section id="contacto" class="contact">
@@ -189,7 +226,7 @@
   <footer>
     <div class="footer-left">
       <p class="footer-address">Avenida Yucatán 54, Col. Roma Norte, Cuauhtémoc, Ciudad de México, C.P. 06700</p>
-      <p>© 2025 Servicios Legales Jauren. Todos los derechos reservados.</p>
+      <p>© 2023 Servicios Legales Jauren. Todos los derechos reservados.</p>
     </div>
     <div class="social-icons">
       <img src="img/svg/x-logo.svg" alt="Twitter logo">
@@ -200,5 +237,28 @@
       <img src="img/svg/youtube-logo.svg" alt="YouTube logo">
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.testimonials-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 </html>

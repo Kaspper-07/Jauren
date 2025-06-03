@@ -424,3 +424,137 @@ footer .social-icons img {
     margin-top: 0.5rem;
   }
 }
+
+
+
+
+
+.value-item h4 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 30%;
+  margin-right: 1rem;
+}
+
+.value-item p {
+  width: 70%;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+
+
+
+
+.value-item:hover {
+  transform: scale(1.02);
+}
+
+.value-item p {
+  font-size: 1.1rem; /* más grande */
+  line-height: 1.8;   /* más espaciado */
+  font-family: 'Georgia', serif; /* fuente más elegante o puedes probar otras */
+  color: #222;
+}
+
+.value-item h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: 'Merriweather', serif; /* o cambia a una más decorativa como 'Playfair Display' */
+  color: var(--color-primary);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+
+.value-item h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+.values-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f7f9fb;
+  border-left: 6px solid var(--color-primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: scale(1.015);
+}
+
+.value-item h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  width: 30%;
+  margin-right: 1rem;
+}
+
+.value-item p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: 'Merriweather', serif;
+  color: #333;
+  width: 70%;
+}
+
+/* Estilos carrusel de testimonios */
+.testimonials-swiper {
+  padding: 2rem 0;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.swiper-slide.testimonial-card {
+  background: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  height: auto;
+}
+.swiper-slide.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+.swiper-slide.testimonial-card .rating {
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+.swiper-slide.testimonial-card p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+.swiper-slide.testimonial-card cite {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+.about-card {
+  background: var(--color-light);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-in-out both;
+}
