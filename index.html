@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Servicios Legales Jauren</title>
-  <meta name="description" content="Despacho legal especializado en bufetes jurídicos y trámites legales en CDMX. Constitución 2023.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./img/logo.png">
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- HEADER -->
   <header>
     <div class="container logo-container">
+      <button id="menu-toggle" class="menu-btn">☰</button>
       <div class="logo">
-        <img src="./img/logo" alt="Logo Servicios Legales Jauren" class="logo-img">
+        <img src="./img/logo.png" alt="Logo Servicios Legales Jauren" class="logo-img" />
         <h1>Servicios Legales Jauren</h1>
       </div>
       <nav>
@@ -21,18 +22,18 @@
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#socios">Socios</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- INICIO -->
   <section id="inicio" class="hero">
     <video class="hero-video" autoplay muted loop>
-      <source src="./img/cinegraph.mp4" type="video/mp4">
-      Tu navegador no soporta el elemento de video.
+      <source src="./img/cinegraph.mp4" type="video/mp4" />
+      Tu navegador no soporta el video.
     </video>
     <div class="hero-content">
       <h2>Protección legal integral para tu tranquilidad</h2>
@@ -41,224 +42,177 @@
     </div>
   </section>
 
-    <!-- Nosotros -->
+  <!-- NOSOTROS -->
   <section id="nosotros" class="about">
     <h3 class="section-title">Nosotros</h3>
     <div class="container about-summary">
       <div class="about-card">
         <p>Servicios Legales Jauren, S.A. de C.V. nació con la visión de ofrecer asesoría jurídica clara y efectiva. Nuestro equipo multidisciplinario defiende los intereses de empresas y particulares en la CDMX y toda la República.</p>
-        <p>Nuestras principales actividades incluyen <strong>Bufetes Jurídicos</strong> y <strong>Servicios de apoyo para trámites legales</strong>, diseñados para brindar soluciones integrales a personas y empresas en todo el país.</p>
+        <p>Especialistas en <strong>Bufetes Jurídicos</strong> y <strong>Servicios de apoyo para trámites legales</strong>.</p>
       </div>
 
-      <div class="values-grid">
+      <div class="value-row">
+        <div class="value-img"><img src="img/compromiso.jpg" alt="Compromiso"></div>
         <div class="value-item">
           <h4>Compromiso</h4>
-          <p>
-            Ética y transparencia en cada paso de tu trámite. Nuestro equipo se compromete a brindarte atención puntual, información clara y resultados reales con base legal.
-          </p>
+          <p>Ética y transparencia en cada paso de tu trámite. Atención puntual, información clara y resultados reales.</p>
         </div>
+      </div>
+
+      <div class="value-row">
+        <div class="value-img"><img src="img/excelencia.jpg" alt="Excelencia"></div>
         <div class="value-item">
           <h4>Excelencia</h4>
-          <p>
-            Estamos actualizados en legislación y mejores prácticas para brindarte siempre el mejor servicio. Nos capacitamos constantemente y usamos herramientas modernas para optimizar cada proceso.
-          </p>
+          <p>Capacitación constante, herramientas modernas y actualización legal para brindarte el mejor servicio.</p>
         </div>
+      </div>
+
+      <div class="value-row">
+        <div class="value-img"><img src="img/empatia.jpg" alt="Empatía"></div>
         <div class="value-item">
           <h4>Empatía</h4>
-          <p>
-            Entendemos tu situación de manera personalizada. Nos tomamos el tiempo para escuchar, explicar y acompañarte en cada etapa del proceso con sensibilidad humana y profesionalismo.
-          </p>
+          <p>Escuchamos y acompañamos con sensibilidad y profesionalismo en cada etapa de tu proceso legal.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- Sección Servicios -->
+
+  <!-- SERVICIOS -->
   <section id="servicios" class="services">
-    <h3 class="section-title">Servicios</h3>
-    <div class="container">
-      <div class="services-grid">
+  <h3 class="section-title">Servicios</h3>
+  <div class="container services-grid custom-layout">
+    <div class="service-card">
+      <div class="service-icon">⚖️</div>
+      <h4>Derecho Civil</h4>
+      <p>Soluciones en contratos, arrendamientos, herencias y controversias civiles.</p>
+      <ul>
+        <li>Redacción y revisión de contratos</li>
+        <li>Testamentarías y sucesiones</li>
+        <li>Juicios de arrendamiento</li>
+        <li>Indemnizaciones y daños</li>
+      </ul>
+    </div>
 
-        <div class="service-card">
-          <div class="service-icon">⚖️</div>
-          <h4>Derecho Civil</h4>
-          <p>Soluciones en contratos, arrendamientos, herencias y controversias civiles.</p>
-          <ul>
-            <li>Redacción y revisión de contratos</li>
-            <li>Testamentarías y sucesiones</li>
-            <li>Juicios de arrendamiento</li>
-            <li>Indemnizaciones y daños</li>
-          </ul>
-        </div>
+    <div class="service-card">
+      <div class="service-icon">🏢</div>
+      <h4>Derecho Mercantil</h4>
+      <p>Asesoría para sociedades, fusiones, adquisiciones y disputas comerciales.</p>
+      <ul>
+        <li>Constitución de sociedades y actas</li>
+        <li>Contratos de compraventa y distribución</li>
+        <li>Procesos concursales</li>
+        <li>Litigio mercantil</li>
+      </ul>
+    </div>
 
-        <div class="service-card">
-          <div class="service-icon">🏢</div>
-          <h4>Derecho Mercantil</h4>
-          <p>Asesoría para sociedades, fusiones, adquisiciones y disputas comerciales.</p>
-          <ul>
-            <li>Constitución de sociedades y actas corporativas</li>
-            <li>Contratos de compraventa y distribución</li>
-            <li>Procesos concursales y reestructuraciones</li>
-            <li>Litigio mercantil</li>
-          </ul>
-        </div>
+    <div class="service-card">
+      <div class="service-icon">👩‍⚖️</div>
+      <h4>Derecho Laboral</h4>
+      <p>Defensa y consultoría para patrones y trabajadores.</p>
+      <ul>
+        <li>Contratos individuales y colectivos</li>
+        <li>Demandas y conciliaciones</li>
+        <li>Prevención de riesgos laborales</li>
+        <li>Capacitación en normatividad STPS</li>
+      </ul>
+    </div>
 
-        <div class="service-card">
-          <div class="service-icon">👩‍⚖️</div>
-          <h4>Derecho Laboral</h4>
-          <p>Defensa y consultoría para patrones y trabajadores.</p>
-          <ul>
-            <li>Contratos individuales y colectivos</li>
-            <li>Demandas y conciliaciones</li>
-            <li>Prevención de riesgos laborales</li>
-            <li>Capacitación en normatividad STPS</li>
-          </ul>
-        </div>
+    <div class="service-card offset-left">
+      <div class="service-icon">💼</div>
+      <h4>Asesoría Fiscal</h4>
+      <p>Cumplimiento y optimización en materia de impuestos.</p>
+      <ul>
+        <li>Declaraciones de IVA e ISR</li>
+        <li>Planeación fiscal estratégica</li>
+        <li>Auditorías y defensa ante el SAT</li>
+        <li>Regímenes especiales</li>
+      </ul>
+    </div>
 
-        <div class="service-card">
-          <div class="service-icon">💼</div>
-          <h4>Asesoría Fiscal</h4>
-          <p>Cumplimiento y optimización en materia de impuestos.</p>
-          <ul>
-            <li>Declaraciones de IVA e ISR</li>
-            <li>Planeación fiscal estratégica</li>
-            <li>Auditorías y defensa ante el SAT</li>
-            <li>Regímenes especiales e incentivos</li>
-          </ul>
-        </div>
+    <!-- Imagen central -->
+  <div class="service-image">
+    <img src="img/asesorando.jpg" alt="Asesor señalando servicios" />
+  </div>
 
-        <div class="service-card">
-          <div class="service-icon">📄</div>
-          <h4>Trámites y Protocolos</h4>
-          <p>Gestión integral ante autoridades y notarías.</p>
-          <ul>
-            <li>Registro de marcas y patentes</li>
-            <li>Protocolización de actas</li>
-            <li>Gestión de licencias y permisos</li>
-            <li>Trámites migratorios y corporativos</li>
-          </ul>
-        </div>
+    <div class="service-card offset-right">
+      <div class="service-icon">📄</div>
+      <h4>Trámites y Protocolos</h4>
+      <p>Gestión integral ante autoridades y notarias.</p>
+      <ul>
+        <li>Registro de marcas y patentes</li>
+        <li>Protocolización de actas</li>
+        <li>Licencias y permisos</li>
+        <li>Trámites migratorios y corporativos</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+
+  <!-- SOCIOS -->
+  <section id="socios" class="partners">
+    <h3 class="section-title">Socios</h3>
+    <div class="container partners-grid">
+      <div class="partner-card">
+        <p class="partner-title">Socio Director</p>
+        <h4>Jesús Cortés</h4>
+        <p>Especialista en derecho penal con más de 20 años de experiencia en litigios y estrategias legales complejas.</p>
+        <img src="img/svg/linkedin-logo.svg" alt="LinkedIn" class="linkedin-icon">
+      </div>
+      <div class="partner-card">
+        <p class="partner-title">Socio</p>
+        <h4>Leonardo Gaytán</h4>
+        <p>Experto en derechos humanos, juicio oral y docencia. Comprometido con la justicia y la mediación.</p>
+        <img src="img/svg/linkedin-logo.svg" alt="LinkedIn" class="linkedin-icon">
+      </div>
+      <div class="partner-card">
+        <p class="partner-title">Socio</p>
+        <h4>Alfonso Navarrete</h4>
+        <p>Referente en prevención del delito, compliance y defensa penal de alto impacto a nivel nacional.</p>
+        <img src="img/svg/linkedin-logo.svg" alt="LinkedIn" class="linkedin-icon">
       </div>
     </div>
   </section>
 
-    <!-- Opiniones - Carrusel horizontal con tarjetas -->
-  <section id="opiniones" class="testimonials">
-    <h3 class="section-title">Lo que dicen de nosotros</h3>
-    <div class="container">
-      <p class="intro">Nuestros clientes valoran la claridad, rapidez y ética con la que abordamos cada caso. Aquí algunas opiniones:</p>
-
-      <div class="swiper testimonials-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">5.0 ★★★★★</div>
-            <p>“El equipo legal fue puntual y claro en todo momento.”</p>
-            <cite>— Laura P.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">4.8 ★★★★☆</div>
-            <p>“Nos ayudaron a resolver un juicio complicado con éxito.”</p>
-            <cite>— Roberto M.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">5.0 ★★★★★</div>
-            <p>“Transparencia total desde la primera consulta.”</p>
-            <cite>— Mariana C.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">4.9 ★★★★☆</div>
-            <p>“Servicio cálido, profesional y altamente recomendable.”</p>
-            <cite>— Alejandro R.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">5.0 ★★★★★</div>
-            <p>“Muy agradecida por la paciencia y claridad del equipo.”</p>
-            <cite>— Gabriela N.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">4.7 ★★★★☆</div>
-            <p>“Me sentí acompañado en todo momento.”</p>
-            <cite>— Víctor L.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">5.0 ★★★★★</div>
-            <p>“Me devolvieron la tranquilidad. ¡Gracias!”</p>
-            <cite>— Ivonne Z.</cite>
-          </div>
-          <div class="swiper-slide testimonial-card">
-            <div class="rating">4.8 ★★★★☆</div>
-            <p>“Excelente trato humano y conocimiento profundo.”</p>
-            <cite>— Tomás E.</cite>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Sección Contacto -->
+  <!-- CONTACTO -->
   <section id="contacto" class="contact">
     <h3 class="section-title">Contacto</h3>
     <div class="container">
-      <p>Escríbenos y te responderemos en menos de 24 horas. ¡Estamos para ayudarte!</p>
       <div class="contact-card">
-        <form action="#" method="post">
+        <form>
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" required>
-
-          <label for="email">Email</label>
+          <label for="email">Correo</label>
           <input type="email" id="email" name="email" required>
-
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
           <button type="submit">Enviar</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-left">
-      <p class="footer-address">Avenida Yucatán 54, Col. Roma Norte, Cuauhtémoc, Ciudad de México, C.P. 06700</p>
-      <p>© 2023 Servicios Legales Jauren. Todos los derechos reservados.</p>
+      <p class="footer-address">Avenida Yucatán 54, Roma Norte, Cuauhtémoc, CDMX, C.P. 06700</p>
+      <p>© 2023 Servicios Legales Jauren</p>
     </div>
     <div class="social-icons">
-      <img src="img/svg/x-logo.svg" alt="Twitter logo">
-      <img src="img/svg/linkedin-logo.svg" alt="LinkedIn logo">
-      <img src="img/svg/facebook-logo.svg" alt="Facebook logo">
-      <img src="img/svg/instagram-logo.svg" alt="Instagram logo">
-      <img src="img/svg/tiktok-logo.svg" alt="TikTok logo">
-      <img src="img/svg/youtube-logo.svg" alt="YouTube logo">
+      <img src="img/svg/x-logo.svg" alt="X">
+      <img src="img/svg/linkedin-logo.svg" alt="LinkedIn">
+      <img src="img/svg/facebook-logo.svg" alt="Facebook">
+      <img src="img/svg/instagram-logo.svg" alt="Instagram">
+      <img src="img/svg/tiktok-logo.svg" alt="TikTok">
+      <img src="img/svg/youtube-logo.svg" alt="YouTube">
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Menú responsive -->
   <script>
-    const swiper = new Swiper('.testimonials-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => nav.classList.toggle('show'));
   </script>
 </body>
 </html>
