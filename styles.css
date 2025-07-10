@@ -478,6 +478,10 @@ footer .footer-address {
   word-wrap: break-word;
 }
 
+footer .copyright {
+  padding-top: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .hero-content h2 {
     font-size: 2rem;
